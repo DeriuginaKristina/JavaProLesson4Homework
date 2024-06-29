@@ -20,6 +20,7 @@ public class TokenFilter extends GenericFilterBean {
     private TokenService service;
 
     public TokenFilter(TokenService service) {
+
         this.service = service;
     }
 
