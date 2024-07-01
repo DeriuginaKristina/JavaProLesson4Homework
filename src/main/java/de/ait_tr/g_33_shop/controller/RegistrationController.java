@@ -22,7 +22,7 @@ public class RegistrationController {
     }
 
     @GetMapping
-    public Response validateCode(String  code){
+    public Response validateCode(@RequestParam String  code){
         service.validateCode(code);
         return new Response("Thank you for registration");
     }

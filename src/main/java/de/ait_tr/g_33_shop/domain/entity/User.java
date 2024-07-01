@@ -33,7 +33,7 @@ public class User implements UserDetails {
 
     @Column(name = "email")
     private String email;
-    
+
     @Column(name = "active")
     private boolean active;
 
@@ -109,6 +109,15 @@ public class User implements UserDetails {
     public String toString() {
         return String.format("User: id - %d, username - %s, roles - %s",
                 id, username, roles == null ? "empty" : roles);
+    }
+
+    public void setActivated(boolean b) {
+        this.active = b;
+    }
+
+    public boolean isActivated() {
+
+        return active;
     }
 
     // Метод для получения зашифрованного пароля

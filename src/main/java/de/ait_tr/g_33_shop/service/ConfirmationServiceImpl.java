@@ -22,7 +22,7 @@ public class ConfirmationServiceImpl implements ConfirmationService {
     public String generateConfirmationCode(User user) {
 //        LocalDateTime expired = LocalDateTime.now().plusDays(1);
         //For testing goals:
-        LocalDateTime expired = LocalDateTime.now().plusMinutes(1);
+        LocalDateTime expired = LocalDateTime.now().plusMinutes(5);
         String code = UUID.randomUUID().toString();
         ConfirmationCode entity = new ConfirmationCode(code, expired, user);
         repository.save(entity);
